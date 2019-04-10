@@ -8,10 +8,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'cd miage'
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-
-
     }
 }
